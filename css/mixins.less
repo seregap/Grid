@@ -1,0 +1,39 @@
+@phone-portrait-size:380px;
+@phone-landscape-size:600px;
+@tablet-mini-size:660px;
+@tablet-portrait-size:768px;
+@smallest-screen-size:800px;
+@small-screen-size:1158px;
+@tablet-landscape-size:1024px;
+@medium-screen-size:1300px;
+
+@smallest-screen-height:400px;
+@small-screen-height:600px;
+@normal-screen-height:800px;
+
+@retina: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+~"only screen and (min-device-pixel-ratio: 1.5)";
+
+@phone:~"only screen and (max-width:@{phone-landscape-size})";
+
+@phone-portrait:~"only screen and (max-width:@{phone-portrait-size})";
+
+@phone-landscape:~"only screen and (max-width:@{phone-landscape-size})";
+
+@tablet-mini:~"only screen and (max-width:@{tablet-mini-size})";
+
+@tablet:~"only screen and (max-width:@{tablet-landscape-size})";
+
+@tablet-portrait:~"only screen and (max-width:@{tablet-portrait-size})";
+
+@tablet-landscape:~"only screen and (max-width:@{tablet-landscape-size})";
+
+@smallest-screen:~"only screen and (max-width:@{smallest-screen-size})";
+
+@small-screen:~"only screen and (max-width:@{small-screen-size})";
+
+@hstatesConfig:~"phone-portrait:@{phone-portrait-size}, phone-landscape:@{phone-landscape-size}, tablet-mini:@{tablet-mini-size}, smallest:@{smallest-screen-size}, small:@{small-screen-size},medium:@{medium-screen-size}";
+
+@vstatesConfig:~"smallest:@{smallest-screen-height}, small:@{small-screen-height}, normal:@{normal-screen-height}";

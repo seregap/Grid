@@ -1,0 +1,62 @@
+@import "mixins";
+@import "grid";
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+//    overflow-x: hidden;
+    font: 15px/1.5 Arial;
+    color: #fff;
+//    width: 980px;
+//    margin: auto;
+}
+
+p {
+    margin: 1em;
+}
+
+ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	}
+	
+ul li {
+	background:#66CCFF;
+	}
+
+.inner {
+    li {
+        background-color: yellow;
+        margin-bottom: 0;
+    }
+}
+
+.module {
+    background-color: red;
+    .column(6, 6);
+    @media @phone {
+        background: green;
+        .column(0, 6);
+    }
+}
+
+.hello {
+    .grid;
+    @media @phone {
+        .grid;
+    }
+}
+
+.hello__first {
+    background-color: red;
+    .column(0, 6);
+}
+
+.hello__second {
+    background-color: green;
+    .column(6, 6);
+}
+

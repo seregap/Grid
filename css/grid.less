@@ -1,0 +1,113 @@
+@import "mixins";
+
+// grid vars
+
+@containerColumnsCount: 8;
+//containerColumnsCount (optional, default is 5)
+//     Number of container columns
+//     Container columns ≠ number of grid columns
+//     Can't be larger than grid columns
+//     Too small number will cause not very precise appearance in IE<8 and WebKit browsers
+//     100 % containerColumnsCount must be 0
+
+@gridColumnsCount: 12;
+//gridColumnsCount
+//     Number of grid columns
+//     Can't be smaller than containerColumnsCount
+
+@gutterWidth: 2;
+//gutterWidth
+//     Container-relative gutter width
+
+// grid logic
+@maxColWidth: 100 / @containerColumnsCount;
+@gutterLessWidth: 100 / @gridColumnsCount * @containerColumnsCount;
+@colRelativeGutterWidth: @gutterWidth / @maxColWidth;
+@gutterCompensation: @gutterLessWidth * @colRelativeGutterWidth / @gridColumnsCount;
+@getContainerWidth: round(@gutterLessWidth + @gutterCompensation, 2);
+@containerPressing: 100% - @getContainerWidth;
+
+.loopingSpans (@index) when (@index =< @gridColumnsCount) {
+
+    .grid__item_span_@{index} {
+        margin-right: (@maxColWidth * @index - @gutterWidth + 0%) * -1;
+        width: @maxColWidth * @index - @gutterWidth + 0%;
+    }
+
+    .loopingSpans(@index + 1);
+}
+
+.loopingCols (@index) when (@index =< @gridColumnsCount) {
+
+    .grid__item_col_@{index} {
+        left: @maxColWidth * (@index - 1) + 0%;
+    }
+
+    .loopingCols(@index + 1);
+}
+
+.loopingReversedSpans (@index) when (@index =< @gridColumnsCount) {
+
+    .grid_reversed .grid__item_span_@{index} {
+        margin-left: (@maxColWidth * @index - @gutterWidth + 0%) * -1;
+    }
+
+    .loopingReversedSpans(@index + 1);
+}
+
+.loopingReversedCols (@index) when (@index =< @gridColumnsCount) {
+
+    .grid_reversed .grid__item_col_@{index} {
+        right: @maxColWidth * (@index - 1) + 0%;
+    }
+
+    .loopingReversedCols(@index + 1);
+}
+
+.loopingSpans (1);
+.loopingCols (1);
+.loopingReversedSpans (1);
+.loopingReversedCols (1);
+
+.grid {
+    position: relative;
+    margin-right: @containerPressing;
+    *zoom: 1;
+    &:before,
+    &:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+}
+
+.grid__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    *display: inline;
+    zoom: 1;
+    min-height: 40px;
+    margin-bottom: 20px;
+}
+
+// grid helpers
+
+.column (@offset, @width) {
+    .grid__item;
+    width: @maxColWidth * @width - @gutterWidth + 0%;
+    margin-right: (@maxColWidth * @width - @gutterWidth + 0%) * -1;
+    left: @maxColWidth * @offset + 0%;
+}
+
+.grid_reversed {
+    direction: rtl;
+    margin-left: @containerPressing;
+    margin-right: 0;
+    .grid__item {
+        direction: ltr;
+        text-align: left;
+        margin-right: 0;
+        left: auto;
+    }
+}
