@@ -2,7 +2,7 @@
 
 // grid vars
 
-@containerColumnsCount: 8;
+@containerColumnsCount: 5;
 //containerColumnsCount (optional, default is 5)
 //     Number of container columns
 //     Container columns ≠ number of grid columns
@@ -26,6 +26,9 @@
 @gutterCompensation: @gutterLessWidth * @colRelativeGutterWidth / @gridColumnsCount;
 @getContainerWidth: round(@gutterLessWidth + @gutterCompensation, 2);
 @containerPressing: 100% - @getContainerWidth;
+
+@getRestoredContainerWidth: @containerColumnsCount * 100;
+@getRestoredInitialWidth: (@gridColumnsCount - @colRelativeGutterWidth) * 100;
 
 .loopingSpans (@index) when (@index =< @gridColumnsCount) {
 
@@ -64,10 +67,26 @@
     .loopingReversedCols(@index + 1);
 }
 
+.loopingRestoredStates (@index) when (@index =< @gridColumnsCount) {
+
+    .grid__item_span_@{index} .grid__restore {
+        margin-right: round((100 - (1 / (@index - @colRelativeGutterWidth) * 100)),2) + 0%;
+    }
+
+    .grid__item_col_@{index} .grid__restore .grid,
+    .grid__item_col_@{index} .grid__restore .grid__initial {
+        left: 100 * (@index - 1) * -1 + 0%;
+    }
+
+    .loopingRestoredStates(@index + 1);
+
+}
+
 .loopingSpans (1);
 .loopingCols (1);
 .loopingReversedSpans (1);
 .loopingReversedCols (1);
+.loopingRestoredStates (1);
 
 .grid {
     position: relative;
@@ -105,9 +124,27 @@
     margin-left: @containerPressing;
     margin-right: 0;
     .grid__item {
-        direction: ltr;
         text-align: left;
         margin-right: 0;
         left: auto;
+        & * {
+            direction: ltr;
+        }
     }
+}
+
+// restored
+
+.grid__restore,
+.grid__initial {
+    position: relative;
+}
+
+.grid__restore .grid {
+    padding-right: 0;
+    margin-right: 100 - @getRestoredContainerWidth + 0%;
+}
+
+.grid__restore .grid__initial {
+    margin-right: 100 - @getRestoredInitialWidth + 0%;
 }

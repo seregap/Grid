@@ -1,162 +1,246 @@
 .grid__item_span_1 {
-  margin-right: -10.5%;
-  width: 10.5%;
+  margin-right: -18%;
+  width: 18%;
 }
 .grid__item_span_2 {
-  margin-right: -23%;
-  width: 23%;
+  margin-right: -38%;
+  width: 38%;
 }
 .grid__item_span_3 {
-  margin-right: -35.5%;
-  width: 35.5%;
+  margin-right: -58%;
+  width: 58%;
 }
 .grid__item_span_4 {
-  margin-right: -48%;
-  width: 48%;
+  margin-right: -78%;
+  width: 78%;
 }
 .grid__item_span_5 {
-  margin-right: -60.5%;
-  width: 60.5%;
-}
-.grid__item_span_6 {
-  margin-right: -73%;
-  width: 73%;
-}
-.grid__item_span_7 {
-  margin-right: -85.5%;
-  width: 85.5%;
-}
-.grid__item_span_8 {
   margin-right: -98%;
   width: 98%;
 }
+.grid__item_span_6 {
+  margin-right: -118%;
+  width: 118%;
+}
+.grid__item_span_7 {
+  margin-right: -138%;
+  width: 138%;
+}
+.grid__item_span_8 {
+  margin-right: -158%;
+  width: 158%;
+}
 .grid__item_span_9 {
-  margin-right: -110.5%;
-  width: 110.5%;
+  margin-right: -178%;
+  width: 178%;
 }
 .grid__item_span_10 {
-  margin-right: -123%;
-  width: 123%;
+  margin-right: -198%;
+  width: 198%;
 }
 .grid__item_span_11 {
-  margin-right: -135.5%;
-  width: 135.5%;
+  margin-right: -218%;
+  width: 218%;
 }
 .grid__item_span_12 {
-  margin-right: -148%;
-  width: 148%;
+  margin-right: -238%;
+  width: 238%;
 }
 .grid__item_col_1 {
   left: 0%;
 }
 .grid__item_col_2 {
-  left: 12.5%;
+  left: 20%;
 }
 .grid__item_col_3 {
-  left: 25%;
+  left: 40%;
 }
 .grid__item_col_4 {
-  left: 37.5%;
+  left: 60%;
 }
 .grid__item_col_5 {
-  left: 50%;
+  left: 80%;
 }
 .grid__item_col_6 {
-  left: 62.5%;
-}
-.grid__item_col_7 {
-  left: 75%;
-}
-.grid__item_col_8 {
-  left: 87.5%;
-}
-.grid__item_col_9 {
   left: 100%;
 }
+.grid__item_col_7 {
+  left: 120%;
+}
+.grid__item_col_8 {
+  left: 140%;
+}
+.grid__item_col_9 {
+  left: 160%;
+}
 .grid__item_col_10 {
-  left: 112.5%;
+  left: 180%;
 }
 .grid__item_col_11 {
-  left: 125%;
+  left: 200%;
 }
 .grid__item_col_12 {
-  left: 137.5%;
+  left: 220%;
 }
 .grid_reversed .grid__item_span_1 {
-  margin-left: -10.5%;
+  margin-left: -18%;
 }
 .grid_reversed .grid__item_span_2 {
-  margin-left: -23%;
+  margin-left: -38%;
 }
 .grid_reversed .grid__item_span_3 {
-  margin-left: -35.5%;
+  margin-left: -58%;
 }
 .grid_reversed .grid__item_span_4 {
-  margin-left: -48%;
+  margin-left: -78%;
 }
 .grid_reversed .grid__item_span_5 {
-  margin-left: -60.5%;
-}
-.grid_reversed .grid__item_span_6 {
-  margin-left: -73%;
-}
-.grid_reversed .grid__item_span_7 {
-  margin-left: -85.5%;
-}
-.grid_reversed .grid__item_span_8 {
   margin-left: -98%;
 }
+.grid_reversed .grid__item_span_6 {
+  margin-left: -118%;
+}
+.grid_reversed .grid__item_span_7 {
+  margin-left: -138%;
+}
+.grid_reversed .grid__item_span_8 {
+  margin-left: -158%;
+}
 .grid_reversed .grid__item_span_9 {
-  margin-left: -110.5%;
+  margin-left: -178%;
 }
 .grid_reversed .grid__item_span_10 {
-  margin-left: -123%;
+  margin-left: -198%;
 }
 .grid_reversed .grid__item_span_11 {
-  margin-left: -135.5%;
+  margin-left: -218%;
 }
 .grid_reversed .grid__item_span_12 {
-  margin-left: -148%;
+  margin-left: -238%;
 }
 .grid_reversed .grid__item_col_1 {
   right: 0%;
 }
 .grid_reversed .grid__item_col_2 {
-  right: 12.5%;
+  right: 20%;
 }
 .grid_reversed .grid__item_col_3 {
-  right: 25%;
+  right: 40%;
 }
 .grid_reversed .grid__item_col_4 {
-  right: 37.5%;
+  right: 60%;
 }
 .grid_reversed .grid__item_col_5 {
-  right: 50%;
+  right: 80%;
 }
 .grid_reversed .grid__item_col_6 {
-  right: 62.5%;
-}
-.grid_reversed .grid__item_col_7 {
-  right: 75%;
-}
-.grid_reversed .grid__item_col_8 {
-  right: 87.5%;
-}
-.grid_reversed .grid__item_col_9 {
   right: 100%;
 }
+.grid_reversed .grid__item_col_7 {
+  right: 120%;
+}
+.grid_reversed .grid__item_col_8 {
+  right: 140%;
+}
+.grid_reversed .grid__item_col_9 {
+  right: 160%;
+}
 .grid_reversed .grid__item_col_10 {
-  right: 112.5%;
+  right: 180%;
 }
 .grid_reversed .grid__item_col_11 {
-  right: 125%;
+  right: 200%;
 }
 .grid_reversed .grid__item_col_12 {
-  right: 137.5%;
+  right: 220%;
+}
+.grid__item_span_1 .grid__restore {
+  margin-right: -11.11%;
+}
+.grid__item_col_1 .grid__restore .grid,
+.grid__item_col_1 .grid__restore .grid__initial {
+  left: 0%;
+}
+.grid__item_span_2 .grid__restore {
+  margin-right: 47.37%;
+}
+.grid__item_col_2 .grid__restore .grid,
+.grid__item_col_2 .grid__restore .grid__initial {
+  left: -100%;
+}
+.grid__item_span_3 .grid__restore {
+  margin-right: 65.52%;
+}
+.grid__item_col_3 .grid__restore .grid,
+.grid__item_col_3 .grid__restore .grid__initial {
+  left: -200%;
+}
+.grid__item_span_4 .grid__restore {
+  margin-right: 74.36%;
+}
+.grid__item_col_4 .grid__restore .grid,
+.grid__item_col_4 .grid__restore .grid__initial {
+  left: -300%;
+}
+.grid__item_span_5 .grid__restore {
+  margin-right: 79.59%;
+}
+.grid__item_col_5 .grid__restore .grid,
+.grid__item_col_5 .grid__restore .grid__initial {
+  left: -400%;
+}
+.grid__item_span_6 .grid__restore {
+  margin-right: 83.05%;
+}
+.grid__item_col_6 .grid__restore .grid,
+.grid__item_col_6 .grid__restore .grid__initial {
+  left: -500%;
+}
+.grid__item_span_7 .grid__restore {
+  margin-right: 85.51%;
+}
+.grid__item_col_7 .grid__restore .grid,
+.grid__item_col_7 .grid__restore .grid__initial {
+  left: -600%;
+}
+.grid__item_span_8 .grid__restore {
+  margin-right: 87.34%;
+}
+.grid__item_col_8 .grid__restore .grid,
+.grid__item_col_8 .grid__restore .grid__initial {
+  left: -700%;
+}
+.grid__item_span_9 .grid__restore {
+  margin-right: 88.76%;
+}
+.grid__item_col_9 .grid__restore .grid,
+.grid__item_col_9 .grid__restore .grid__initial {
+  left: -800%;
+}
+.grid__item_span_10 .grid__restore {
+  margin-right: 89.9%;
+}
+.grid__item_col_10 .grid__restore .grid,
+.grid__item_col_10 .grid__restore .grid__initial {
+  left: -900%;
+}
+.grid__item_span_11 .grid__restore {
+  margin-right: 90.83%;
+}
+.grid__item_col_11 .grid__restore .grid,
+.grid__item_col_11 .grid__restore .grid__initial {
+  left: -1000%;
+}
+.grid__item_span_12 .grid__restore {
+  margin-right: 91.6%;
+}
+.grid__item_col_12 .grid__restore .grid,
+.grid__item_col_12 .grid__restore .grid__initial {
+  left: -1100%;
 }
 .grid {
   position: relative;
-  margin-right: 32.44%;
+  margin-right: 57.99%;
   *zoom: 1;
 }
 .grid:before,
@@ -176,12 +260,25 @@
 }
 .grid_reversed {
   direction: rtl;
-  margin-left: 32.44%;
+  margin-left: 57.99%;
   margin-right: 0;
 }
 .grid_reversed .grid__item {
-  direction: ltr;
   text-align: left;
   margin-right: 0;
   left: auto;
+}
+.grid_reversed .grid__item * {
+  direction: ltr;
+}
+.grid__restore,
+.grid__initial {
+  position: relative;
+}
+.grid__restore .grid {
+  padding-right: 0;
+  margin-right: -400%;
+}
+.grid__restore .grid__initial {
+  margin-right: -1090%;
 }
